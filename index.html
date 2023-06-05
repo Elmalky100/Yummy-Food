@@ -1,0 +1,253 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy</title>
+    <link rel="shortcut icon" href="images/images1 (1).png" type="image/x-icon">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mediaquery.css">
+</head>
+
+<body>
+    <div
+        class="loading-screen position-fixed top-0 start-0 end-0 bottom-0 bg-black justify-content-center align-items-center">
+        <i class="fa fa-spinner fa-spin fa-5x"></i>
+    </div>
+
+    <div class="side-nav-menu min-vh-100 position-fixed d-flex top-0 left-0 ">
+        <div class="nav-tab  d-flex flex-column justify-content-between min-vh-100 p-4">
+            <div class="links">
+                <ul class="list-unstyled overflow-hidden">
+                    <li class="py-2  cursor-pointer position-relative li1 ">Search</li>
+                    <li class="py-2  cursor-pointer position-relative li2 ">Categories</li>
+                    <li class="py-2  cursor-pointer position-relative li3 ">Area</li>
+                    <li class="py-2 cursor-pointer position-relative li4 ">Ingredients</li>
+                    <li class="py-2  cursor-pointer position-relative li5 ">Contact Us</li>
+                </ul>
+            </div>
+            <div class="nav-footer">
+                <div class="icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <div class="footer">
+                    <p>Copyright Â© 2019 All Rights <br>Reserved.</p>
+                </div>
+            </div>
+        </div>
+        <div class="nav-header d-flex flex-column justify-content-between py-4 text-center px-2 bg-white text-black">
+            <img class="logo" src="images/images1 (1).png" alt="logo-image">
+            <i class="fa-solid open-close-icon fa-2x fa-align-justify cursor-pointer"></i>
+            <i class="fa-solid open-close-icon fa-2x fa-x cursor-pointer d-none"></i>
+            <div>
+                <i class="fa-solid fa-globe d-block pb-1 cursor-pointer"></i>
+                <i class="fa-solid fa-share-nodes cursor-pointer"></i>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container w-75 d-none" id="searchContainer">
+        <div class="row py-4 move">
+
+
+            <div class="col-md-6 ">
+                <input class="form-control input1 bg-transparent text-white mb-3" type="text" placeholder="Search By Name" onclick="clearInput1()">
+            </div>
+            <div class="col-md-6">
+                <input maxlength="1" class="input2 form-control bg-transparent text-white " type="text"
+                    placeholder="Search By First Letter" onclick=" clearInput2()">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="min-vh-100 position-relative" id="data">
+        <div class="inner-loading-screen top-0 start-0 end-0 bottom-0 justify-content-center align-items-center">
+            <i class="fa fa-spinner fa-spin fa-5x"></i>
+        </div>
+        <div class="container" id="searchContainer">
+            <div class="row py-5 g-4 move " id="rowData">
+                <!-- <div class="col-md-3 meal">
+                    <div class=" position-relative overflow-hidden rounded-2 cursor-pointer mealclick" idmeal="">
+                        <img class="w-100" src="" alt="image">
+                        <div class="meal-layer position-absolute d-flex align-items-center text-black p-2">
+                            <h3></h3>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="min-vh-100 position-relative d-none " id="details">
+        <div class="inner-loading-screen top-0 start-0 end-0 bottom-0 justify-content-center align-items-center"
+           >
+            <i class="fa fa-spinner fa-spin fa-5x"></i>
+        </div>
+
+
+        <div class="container">
+            <div class="row py-5 g-4  move1" id="mealDetails">
+                <div class="col-md-4">
+                    <img class="w-100 rounded-3" src="" alt="image">
+                    <h2></h2>
+                </div>
+                <div class="col-md-8">
+                    <h2>Instructions</h2>
+                    <p></p>
+                    <h3><span class="fw-bolder">Area : </span></h3>
+                    <h3><span class="fw-bolder">Category : </span></h3>
+                    <h3>Recipes :</h3>
+                    <ul class="list-unstyled d-flex g-3 flex-wrap">
+                        <li class="alert alert-info m-2 p-1"></li>
+                    </ul>
+
+                    <h3>Tags :</h3>
+                    <ul class="list-unstyled d-flex g-3 flex-wrap">
+
+                        <li class="alert alert-danger m-2 p-1"></li>
+                    </ul>
+
+                    <a target="_blank" href="" class="btn btn-success">Source</a>
+                    <a target="_blank" href="" class="btn btn-danger">Youtube</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ______________________________________________________________________________                             category-->
+
+
+    <div class="container" id="searchContainers">
+        <div id="meal">
+            <div class="row g-4 py-5" id="Category1">
+                <div class="row py-5 g-4">
+                    <!-- <div class="col-md-3" id="category2">
+                        <div class=" position-relative overflow-hidden rounded-2 cursor-pointer">
+                                <img class="w-100" src="" alt="image" />
+                                <div class="meal-layer position-absolute text-center text-black p-2">
+                                    <h3></h3>
+                                    <p></p>
+                                </div>
+                        </div>
+                    </div> -->
+            </div>
+        </div>
+        </div>
+
+        <!-- ____________________________ area  -->
+
+
+        <div class="container">
+            <div id="mealarea">
+                <div class="row py-5 g-4 d-none" id="areacountry">
+                    <div class="row py-5 g-4 " id="rowData">
+                        <div class="col-md-3">
+                            <div class="rounded-2 text-center cursor-pointer">
+                                <i class="fa-solid fa-house-laptop fa-4x"></i>
+                                <h3></h3>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- _______________________________________________________ingredient -->
+
+
+        <div class="container">
+            <div id="ingredientMeal">
+                <div class="row py-5 g-4 d-none" id="Ingredients">
+                    <div class="row py-5 g-4 " id="rowData">
+                        <div class="col-md-3">
+                            <div class="rounded-2 text-center cursor-pointer">
+                                <i class="fa-solid fa-drumstick-bite fa-4x"></i>
+                                <h3></h3>
+                                <p></p>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- ______________________________________________ contact us-->
+
+
+
+
+        <div class="container">
+            <div class="row py-5 g-4 d-none move2" id="rowData1">
+                <div class="contact min-vh-100 d-flex justify-content-center align-items-center">
+                    <div class="container w-75 text-center">
+                        <div class="row g-4 ">
+                            <div class="col-md-6">
+                                <input id="nameInput" type="text" class="form-control" placeholder="Enter Your Name">
+                                <div id="nameAlert" class="alert alert-danger w-100 mt-2 d-none">
+                                    Special characters and numbers not allowed
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <input id="emailInput" type="email" class="form-control "
+                                    placeholder="Enter Your Email">
+                                <div id="emailAlert" class="alert alert-danger w-100 mt-2 d-none">
+                                    Email not valid *exemple@yyy.zzz
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <input id="phoneInput" type="text" class="form-control " placeholder="Enter Your Phone">
+                                <div id="phoneAlert" class="alert alert-danger w-100 mt-2 d-none">
+                                    Enter valid Phone Number
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <input id="ageInput" type="number" class="form-control " placeholder="Enter Your Age">
+                                <div id="ageAlert" class="alert alert-danger w-100 mt-2 d-none">
+                                    Enter valid age
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <input id="passwordInput" type="password" class="form-control "
+                                    placeholder="Enter Your Password">
+                                <div id="passwordAlert" class="alert alert-danger w-100 mt-2 d-none">
+                                    Enter valid password *Minimum eight characters, at least one letter and one number:*
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <input id="repasswordInput" type="password" class="form-control "
+                                    placeholder="Repassword">
+                                <div id="repasswordAlert" class="alert alert-danger w-100 mt-2 d-none">
+                                    Enter valid repassword
+                                </div>
+                            </div>
+                        </div>
+                        <button id="submitBtn" disabled class="btn btn-outline-danger px-2 mt-3">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/jquery-3.6.3.min.js"></script>
+        <script src="js/main.js"></script>
+</body>
+
+</html>
